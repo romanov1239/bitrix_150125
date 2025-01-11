@@ -13,9 +13,7 @@
 $this->setFrameMode(true);
 ?>
 <ul class="slider_index">
-<?if($arParams["DISPLAY_TOP_PAGER"]):?>
-	<?=$arResult["NAV_STRING"]?><br />
-<?endif;?>
+
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<?
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -27,7 +25,7 @@ $this->setFrameMode(true);
                 <div class="ind_slid_txt_bl">
                     <div class="ind_slid_tit"><?echo $arItem["NAME"]?></div>
                     <div class="ind_slid_txt"><?echo $arItem["PREVIEW_TEXT"];?></div>
-                    <a class="red_bt" href="">Узнать подробнее</a>
+                    <a class="red_bt" href="<?= $arProps["URL"]["VALUE"];?>">Узнать подробнее</a>
                 </div>
                 <div class="ind_slid_img"><img src="<?=SITE_TEMPLATE_PATH?>/img/index_slider1.png" alt=""/></div>
             </div>
