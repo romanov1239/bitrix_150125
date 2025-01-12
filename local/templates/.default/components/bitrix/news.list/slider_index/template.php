@@ -12,7 +12,8 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<ul class="slider_index">
+
+<ul class="index_slider">
 
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<?
@@ -27,12 +28,9 @@ $this->setFrameMode(true);
                     <div class="ind_slid_txt"><?echo $arItem["PREVIEW_TEXT"];?></div>
                     <a class="red_bt" href="<?= $arProps["URL"]["VALUE"];?>">Узнать подробнее</a>
                 </div>
-                <div class="ind_slid_img"><img src="<?=SITE_TEMPLATE_PATH?>/img/index_slider1.png" alt=""/></div>
+                <div class="ind_slid_img"><img src="<?=$arItem["DETAIL_PICTURE"]["SRC"]?>" alt=""/></div>
             </div>
         </div>
-
 	</li>
 <?endforeach;?>
-
-
 </ul>
