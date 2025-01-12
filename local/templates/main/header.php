@@ -239,34 +239,7 @@ hghghg
                     "STRICT_SECTION_CHECK" => "N"
                 )
             );?>
-			<ul class="index_slider">
-				<li>
-					<div class="index_slider_el" style="background-image:url(<?=SITE_TEMPLATE_PATH?>/img/index_slider_bg.png);">
-						<div class="standart_width index_slider_cont">
-							<div class="ind_slid_txt_bl">
-								<div class="ind_slid_tit">Осенний ценопад</div>
-								<div class="ind_slid_txt">Перспективное планирование способствует повышению качества поставленных обществом задач. В частности, синтетическое тестирование прекрасно подходит для реализации стандартных подходов.</div>
-								<a class="red_bt" href="">Узнать подробнее</a>
-							</div>
-							<div class="ind_slid_img"><img src="<?=SITE_TEMPLATE_PATH?>/img/index_slider1.png" alt=""/></div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="index_slider_el" style="background-image:url(<?=SITE_TEMPLATE_PATH?>/img/index_slider_bg.png);">
-						<div class="standart_width index_slider_cont">
-							<div class="ind_slid_txt_bl">
-								<div class="ind_slid_tit">Осенний ценопад</div>
-								<div class="ind_slid_txt">Перспективное планирование способствует повышению качества поставленных обществом задач. В частности, синтетическое тестирование прекрасно подходит для реализации стандартных подходов.</div>
-								<a class="red_bt" href="">Узнать подробнее</a>
-							</div>
-							<div class="ind_slid_img"><img src="<?=SITE_TEMPLATE_PATH?>/img/index_slider1.png" alt=""/></div>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-        <?endif;?>
+			        <?endif;?>
 	</header>
 	<section>
 	    <div class="bread_crumbs_bl">

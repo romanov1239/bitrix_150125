@@ -2,7 +2,8 @@ $(document).ready(function(){
 	
 	//слайдер на главной
 	$(".index_slider").bxSlider({
-		mode: 'fade'
+		mode: 'fade',
+		touchEnabled:false
 	});
 	
 	//стилизация форм
