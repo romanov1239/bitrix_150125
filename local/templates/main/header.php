@@ -180,6 +180,7 @@ hghghg
 				</div>
 			</div>
 		</div>
+        <h3> https://github.com/romanov1239/bitrix_150125.git<h3>
         <?if($isIndex):?>
 		<div class="index_slider_bl">
             <?$APPLICATION->IncludeComponent(
