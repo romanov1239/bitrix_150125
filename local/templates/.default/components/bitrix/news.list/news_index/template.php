@@ -25,7 +25,7 @@ $this->setFrameMode(true);
         <div class="news_el_img"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"title="<?=$arItem["NAME"]?>" ><img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>"/></a></div>
         <div class="news_el_cont">
             <div class="news_el_tit"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></div>
-            <div class="news_el_txt"><?=$arItem["NAME"]?></div>
+            <div class="news_el_txt"><?=$arItem["PREVIEW_TEXT"]?></div>
             <div class="news_el_data"><?=$arItem["DISPLAY_ACTIVE_FROM"]?></div>
             <div class="news_el_look"><?=intval($arItem["SHOW_COUNTER"])?></div>
         </div>
