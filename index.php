@@ -353,6 +353,16 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 					</div>
 				</div>
 				<div class="all_bt_bl">
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/include/inc_news.php"
+                        )
+                    );?>
 					<a class="all_bt" href="">Все новости</a>
 				</div>
 
