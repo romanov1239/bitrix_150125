@@ -47,6 +47,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
 							<img src="<?=SITE_TEMPLATE_PATH?>/img/star_gray.png" alt=""/>
 						</div>
 						<div class="cat_el_price">
+
 							<div class="cat_price">221 руб.</div>
 							<div class="cat_old_price">
 								<div class="price">287 руб.</div>
