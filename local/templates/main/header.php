@@ -254,7 +254,7 @@ hghghg
 );?>
 </div>
 					</div>
-		<div class="gray_bg">
+        <div class="white_bg">
 			<div class="standart_width">
                 <?if (!$isIndex):?>
                 <div class="title"><?$APPLICATION->ShowTitle(false);?></div>

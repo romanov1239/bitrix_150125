@@ -1,6 +1,17 @@
 
 			</div>
 		</div>
+
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:main.include",
+                "",
+                Array(
+                    "AREA_FILE_RECURSIVE" => "Y",
+                    "AREA_FILE_SHOW" => "sect",
+                    "AREA_FILE_SUFFIX" => "inc",
+                    "EDIT_TEMPLATE" => ""
+                )
+            );?>
 	</section>
 	<footer>
 		<div class="foot_info_bl">
