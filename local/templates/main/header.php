@@ -180,7 +180,7 @@ hghghg
 				</div>
 			</div>
 		</div>
-        <h3> https://github.com/romanov1239/bitrix_150125.git<h3>
+        <h3> https://github.com/romanov1239/bitrix_150125.git</h3>
         <?if($isIndex):?>
 		<div class="index_slider_bl">
             <?$APPLICATION->IncludeComponent(
@@ -201,20 +201,20 @@ hghghg
                     "CHECK_DATES" => "Y",
                     "DETAIL_URL" => "",
                     "DISPLAY_BOTTOM_PAGER" => "Y",
-                    "DISPLAY_DATE" => "Y",
-                    "DISPLAY_NAME" => "Y",
+                    "DISPLAY_DATE" => "N",
+                    "DISPLAY_NAME" => "N",
                     "DISPLAY_PICTURE" => "Y",
                     "DISPLAY_PREVIEW_TEXT" => "Y",
                     "DISPLAY_TOP_PAGER" => "N",
-                    "FIELD_CODE" => array("",""),
+                    "FIELD_CODE" => array("DETAIL_PICTURE",""),
                     "FILTER_NAME" => "",
                     "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                    "IBLOCK_ID" => "1",
-                    "IBLOCK_TYPE" => "othher",
+                    "IBLOCK_ID" => "4",
+                    "IBLOCK_TYPE" => "other",
                     "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-                    "INCLUDE_SUBSECTIONS" => "Y",
+                    "INCLUDE_SUBSECTIONS" => "N",
                     "MESSAGE_404" => "",
-                    "NEWS_COUNT" => "10",
+                    "NEWS_COUNT" => "2",
                     "PAGER_BASE_LINK_ENABLE" => "N",
                     "PAGER_DESC_NUMBERING" => "N",
                     "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -235,11 +235,11 @@ hghghg
                     "SHOW_404" => "N",
                     "SORT_BY1" => "ACTIVE_FROM",
                     "SORT_BY2" => "SORT",
-                    "SORT_ORDER1" => "ASC",
+                    "SORT_ORDER1" => "DESC",
                     "SORT_ORDER2" => "ASC",
                     "STRICT_SECTION_CHECK" => "N"
                 )
-            );?>
+            );?><br>
 			        <?endif;?>
 	</header>
 	<section>
@@ -253,12 +253,13 @@ hghghg
 	false
 );?>
 </div>
-					</div>
-        <div class="white_bg">
-			<div class="standart_width">
+        </div>
+        <div class="gray_bg">
+            <div class="standart_width">
                 <?if (!$isIndex):?>
-                <div class="title"><?$APPLICATION->ShowTitle(false);?></div>
+                    <div class="title"><?$APPLICATION->ShowTitle(false);?></div>
                 <?endif;?>
+
 
 
 
