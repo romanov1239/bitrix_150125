@@ -13,9 +13,7 @@
 $this->setFrameMode(true);
 ?>
 
-<?if($arParams["DISPLAY_TOP_PAGER"]):?>
-	<?=$arResult["NAV_STRING"]?><br />
-<?endif;?>
+
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<?
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -32,23 +30,31 @@ $this->setFrameMode(true);
             </div>
         </div>
         <div class="cat_el_star">
+
+            <?for($i=1;$i<=5;$i++):?>
+            <?if($arProps['RATING']['VALUE']>=$i):?>
             <img src="<?=SITE_TEMPLATE_PATH?>/img/star_orange.png" alt=""/>
-            <img src="<?=SITE_TEMPLATE_PATH?>/img/star_orange.png" alt=""/>
-            <img src="<?=SITE_TEMPLATE_PATH?>/img/star_orange.png" alt=""/>
-            <img src="<?=SITE_TEMPLATE_PATH?>/img/star_orange.png" alt=""/>
+            <?else:?>
+
+
             <img src="<?=SITE_TEMPLATE_PATH?>/img/star_gray.png" alt=""/>
+            <?endif;?>
+            <?endfor;?>
         </div>
         <div class="cat_el_price">
-
-            <div class="cat_price">221 руб.</div>
+<?if(!$arProps['DISCOUNT']['VALUE']):?>
+            <div class="cat_price"><?=$arProps['PRICE']['VALUE']?>руб.</div>
+            <?else:?>
+            <div class="cat_price"><?=$price_new=$arProps['PRICE']['VALUE']-($arProps['PRICE']['VALUE']*$arProps['DISCOUNT']['VALUE']/100)?></div>
             <div class="cat_old_price">
-                <div class="price">287 руб.</div>
-                <div class="sale">-22%</div>
+                <div class="price"><?=$arProps['PRICE']['VALUE']?>руб.</div>
+                <div class="sale">-<?=$arProps['DISCOUNT']['VALUE']?>%</div>
             </div>
+<?endif;?>
         </div>
         <div class="cat_el_name">
             <div class="cat_el_tit"><a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$arItem["NAME"]?></a></div>
-            <div class="cat_el_avtor">Константин  Красновский</div>
+            <div class="cat_el_avtor"><?=implode(', ', $arProps['AUTHOR']['VALUE'])?></div>
         </div>
         <a class="favor_bt" href="">В избранное</a>
     </div>
