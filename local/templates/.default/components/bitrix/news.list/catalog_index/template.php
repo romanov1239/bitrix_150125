@@ -13,7 +13,9 @@
 $this->setFrameMode(true);
 ?>
 
-
+<div class="catalog_list_page">
+    <div class="standart_width">
+        <div class="catalog_list">
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<?
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -62,5 +64,19 @@ $this->setFrameMode(true);
 <?endforeach;?>
 <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
 	<br /><?=$arResult["NAV_STRING"]?>
+    <a class="ajax-pager-link more_bt" href="">Показать еще 10</a>
+    <div class="number_bl">
+        <a class="prev" href=""></a>
+        <a href="">1</a>
+        <a class="active" href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <span>...</span>
+        <a href="">9</a>
+        <a class="next" href=""></a>
+    </div>
 <?endif;?>
 
+    </div>
+    </div>
+</div>
