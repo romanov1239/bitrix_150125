@@ -58,7 +58,7 @@ if (CModule::IncludeModule('iblock')) {
             <div class="filter_bl">
                 <?$APPLICATION->IncludeComponent(
                     "bitrix:catalog.smart.filter",
-                    "",
+                    "catalog",
                     Array(
                         "CACHE_GROUPS" => "Y",
                         "CACHE_TIME" => "36000000",
@@ -79,7 +79,8 @@ if (CModule::IncludeModule('iblock')) {
                         "SEF_MODE" => "N",
                         "TEMPLATE_THEME" => "blue",
                         "XML_EXPORT" => "N"
-                    )
+                    ),
+                    $component
                 );?>
                 <img src="<?= SITE_TEMPLATE_PATH ?>/img/filter.png" alt=""/>
             </div>
