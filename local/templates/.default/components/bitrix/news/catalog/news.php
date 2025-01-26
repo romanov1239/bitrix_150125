@@ -18,9 +18,8 @@ $this->setFrameMode(true);
 ?>
 <?$APPLICATION->IncludeComponent(
     "bitrix:catalog.section.list",
-    "",
+    "catalog",
     Array(
-        "ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
         "ADD_SECTIONS_CHAIN" => $arParams["ADD_SECTIONS_CHAIN"],
         "CACHE_FILTER" => $arParams["CACHE_FILTER"],
         "CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
@@ -29,7 +28,6 @@ $this->setFrameMode(true);
         "COUNT_ELEMENTS" => "N",
         "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
         "FILTER_NAME" => "sectionsFilter",
-        "HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
         "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
         "IBLOCK_ID" => $arParams["IBLOCK_ID"],
         "SECTION_CODE" => "",
@@ -38,12 +36,19 @@ $this->setFrameMode(true);
         "SECTION_URL" => "",
         "SECTION_USER_FIELDS" => array("",""),
         "SHOW_PARENT_NAME" => "Y",
-        "TOP_DEPTH" => "2",
-        "VIEW_MODE" => "LIST"
-    )
+        "TOP_DEPTH" => "1",
+        "VIEW_MODE" => "TILE"
+    ),
+    $component
 );?>
+    <br>
+    <br>
+nkhkhkh111
+    <br>
+    <br>
+    <br>
 
-<? $APPLICATION->IncludeComponent(
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"",
 	[
