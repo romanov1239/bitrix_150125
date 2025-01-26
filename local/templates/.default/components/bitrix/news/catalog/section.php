@@ -82,15 +82,34 @@ if (CModule::IncludeModule('iblock')) {
                     ),
                     $component
                 );?>
-                <img src="<?= SITE_TEMPLATE_PATH ?>/img/filter.png" alt=""/>
+                <img src="/img/filter.png" alt=""/>
             </div>
         </div>
         <div class="content_c">
             <div class="sorting_bl">
                 <span>Сортировать:</span>
+
+                <?
+                $arSort=[
+                    'PROPERTY_PRICE'=>'по цене',
+                    'PROPERTY_RATING'=>'по рейтингу',
+                    'ID'=>'по новизне',
+                ];
+
+                foreach ($arSort as $k=>$v){
+                    $url=$APPLICATION->GetCurPageParam('by='.$k.'&sort=ASK', ['by','sort']);
+                    ?><a class="sorting_el min" href=""><i></i><?=$v?></a><?
+
+                }
+                if ($_GET['by']) {
+
+                }
+
+
+                ?><?/*
                 <a class="sorting_el active min" href=""><i></i>По цене</a>
                 <a class="sorting_el active max" href=""><i></i>По рейтингу</a>
-                <a class="sorting_el" href=""><i></i>По новизне</a>
+                <a class="sorting_el" href=""><i></i>По новизне</a>*/?>
             </div>
 
             <?$APPLICATION->IncludeComponent(
@@ -117,7 +136,7 @@ if (CModule::IncludeModule('iblock')) {
                     "DISPLAY_PREVIEW_TEXT" => "Y",
                     "DISPLAY_TOP_PAGER" => "N",
                     "FIELD_CODE" => array("",""),
-                    "FILTER_NAME" => "",
+                    "FILTER_NAME" => "arrFilter",
                     "HIDE_LINK_WHEN_NO_DETAIL" => "N",
                     "IBLOCK_ID" => "5",
                     "IBLOCK_TYPE" => "catalog",
