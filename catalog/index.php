@@ -65,7 +65,7 @@ $APPLICATION->SetTitle("Каталог");
         "SET_STATUS_404" => "Y",
         "SET_TITLE" => "Y",
         "SHOW_404" => "Y",
-        "SORT_BY1" => "ID",
+        "SORT_BY1" => "PROPERTY_PRICE",
         "SORT_BY2" => "SORT",
         "SORT_ORDER1" => "DESC",
         "SORT_ORDER2" => "ASC",

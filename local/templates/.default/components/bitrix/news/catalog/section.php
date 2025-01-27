@@ -90,6 +90,19 @@ if (CModule::IncludeModule('iblock')) {
                 <span>Сортировать:</span>
 
                 <?
+                if ($_GET['by']) {
+                    $by=$_GET['by'];
+                }
+                else {
+                    $by=$arParams['SORT_BY1'];
+                }
+                if ($_GET['sort']) {
+                    $sort=$_GET['sort'];
+                }
+                else {
+                    $sort=$arParams['SORT_ORDER1'];
+                }
+
                 $arSort=[
                     'PROPERTY_PRICE'=>'по цене',
                     'PROPERTY_RATING'=>'по рейтингу',
@@ -97,11 +110,16 @@ if (CModule::IncludeModule('iblock')) {
                 ];
 
                 foreach ($arSort as $k=>$v){
-                    $url=$APPLICATION->GetCurPageParam('by='.$k.'&sort=ASK', ['by','sort']);
-                    ?><a class="sorting_el min" href=""><i></i><?=$v?></a><?
-
-                }
-                if ($_GET['by']) {
+                    $sort_new='ASC';
+                    if ($by==$k) {
+                        $sort_new=($sort=='ASC')?'DESC':'ASC';
+                    }
+                    elseif ($k=='PROPERTY_RATING'){
+                        $sort_new='DESC';
+                    }
+                    echo $k.''.$sort_new;
+                    $url=$APPLICATION->GetCurPageParam('by='.$k.'&sort='.$sort_new, ['by','sort']);
+                    ?><a class="sorting_el min" href="<?=$url?>"><i></i><?=$v?></a><?
 
                 }
 
@@ -162,9 +180,9 @@ if (CModule::IncludeModule('iblock')) {
                     "SET_STATUS_404" => "N",
                     "SET_TITLE" => "N",
                     "SHOW_404" => "N",
-                    "SORT_BY1" => "SORT",
+                    "SORT_BY1" => $by,
                     "SORT_BY2" => "SORT",
-                    "SORT_ORDER1" => "DESC",
+                    "SORT_ORDER1" => $sort,
                     "SORT_ORDER2" => "ASC",
                     "STRICT_SECTION_CHECK" => "N"
                 )
