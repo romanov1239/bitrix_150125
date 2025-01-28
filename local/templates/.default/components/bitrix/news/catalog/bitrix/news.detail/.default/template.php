@@ -12,6 +12,73 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+
+<div class="detail_info_bl clear_after">
+    <div class="section det_gallery clear_after">
+        <ul class="tabs det_tabs not_style">
+            <li class="current"><img src="./img/Books-PNG.png" alt=""/></li>
+            <li><img src="./img/Books-PNG.png" alt=""/></li>
+            <li><img src="./img/Books-PNG.png" alt=""/></li>
+            <li><img src="./img/Books-PNG.png" alt=""/></li>
+        </ul>
+        <div class="det_box_bl">
+            <div class="box det_box" style="display:block;">
+                <a href="./img/Books-PNG.png" data-fancybox="images"><img src="./img/Books-PNG.png" alt=""/></a>
+            </div>
+            <div class="box det_box">
+                <a href="./img/Books-PNG.png" data-fancybox="images"><img src="./img/Books-PNG.png" alt=""/></a>
+            </div>
+            <div class="box det_box">
+                <a href="./img/Books-PNG.png" data-fancybox="images"><img src="./img/Books-PNG.png" alt=""/></a>
+            </div>
+            <div class="box det_box">
+                <a href="./img/Books-PNG.png" data-fancybox="images"><img src="./img/Books-PNG.png" alt=""/></a>
+            </div>
+        </div>
+    </div>
+    <div class="detail_info">
+        <div class="detail_info_top">
+            <h1>Серая книга</h1>
+            <div class="cat_el_star">
+                <img src="./img/star_orange.png" alt=""/>
+                <img src="./img/star_orange.png" alt=""/>
+                <img src="./img/star_orange.png" alt=""/>
+                <img src="./img/star_orange.png" alt=""/>
+                <img src="./img/star_gray.png" alt=""/>
+            </div>
+            <div class="det_price_status_bl">
+                <div class="det_price_bl">
+                    <div class="det_price">450 руб.</div>
+                    <div class="cat_old_price">
+                        <div class="price">500 руб.</div>
+                        <div class="sale">-10%</div>
+                    </div>
+                    <a class="favor_bt active" href="">В избранное</a>
+                </div>
+                <div class="det_status_bl">
+                    <div class="det_status_el green">В наличии</div>
+                    <div class="det_status_el red">Осталось мало</div>
+                    <div class="det_status_el blue">Бесплатная доставка</div>
+                </div>
+            </div>
+        </div>
+        <div class="detail_info_bottom">
+            <div class="detail_option_list">
+                <div class="detail_option_el">Автор:  <a href="">Сергей Серый</a></div>
+                <div class="detail_option_el">Год издания:  2018</div>
+                <div class="detail_option_el">Издательство:  <a href="">Первый</a>, <a href="">Второй</a></div>
+                <div class="detail_option_el">Количество страниц:  123</div>
+                <div class="detail_option_el">Артикул:  c123456</div>
+                <div class="detail_option_el">Переплет:  Твердый (7-инт)</div>
+                <div class="detail_option_el">Возрастное ограничение:  6+</div>
+                <div class="detail_option_el">Формат:  170x217 мм</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="news-detail">
 	<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>
 		<img

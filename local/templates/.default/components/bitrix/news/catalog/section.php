@@ -131,6 +131,7 @@ if (CModule::IncludeModule('iblock')) {
                         $sort_new='DESC';
                     }
                     echo $k.''.$sort_new;
+                    echo $_COOKIE['by'];
                     $url=$APPLICATION->GetCurPageParam('by='.$k.'&sort='. $sort_new, ['by','sort']);
                     echo $class;
                     ?><a class="sorting_el <?=$class?>" href="<?=$url?>"><i></i><?=$v?></a><?
