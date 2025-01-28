@@ -92,13 +92,23 @@ if (CModule::IncludeModule('iblock')) {
                 <?
                 if ($_GET['by']) {
                     $by=$_GET['by'];
+                    setcookie($by,'by', time()+(60*10),'/');
+                }
+                elseif ($_COOKIE['by']) {
+                    $by=$_COOKIE['by'];
                 }
                 else {
                     $by=$arParams['SORT_BY1'];
                 }
                 if ($_GET['sort']) {
                     $sort=$_GET['sort'];
+                   setcookie($sort,'sort', time()+(60*10),'/');
                 }
+                elseif ($_COOKIE['sort']) {
+                    $sort=$_COOKIE['sort'];
+
+                }
+
                 else {
                     $sort=$arParams['SORT_ORDER1'];
                 }
@@ -111,15 +121,19 @@ if (CModule::IncludeModule('iblock')) {
 
                 foreach ($arSort as $k=>$v){
                     $sort_new='ASC';
+                    $class='';
                     if ($by==$k) {
                         $sort_new=($sort=='ASC')?'DESC':'ASC';
+                        $class='active';
+                        $class.=($sort_new=='ASC')?' max':' min';
                     }
                     elseif ($k=='PROPERTY_RATING'){
                         $sort_new='DESC';
                     }
                     echo $k.''.$sort_new;
-                    $url=$APPLICATION->GetCurPageParam('by='.$k.'&sort='.$sort_new, ['by','sort']);
-                    ?><a class="sorting_el min" href="<?=$url?>"><i></i><?=$v?></a><?
+                    $url=$APPLICATION->GetCurPageParam('by='.$k.'&sort='. $sort_new, ['by','sort']);
+                    echo $class;
+                    ?><a class="sorting_el <?=$class?>" href="<?=$url?>"><i></i><?=$v?></a><?
 
                 }
 
